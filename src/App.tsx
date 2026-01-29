@@ -19,7 +19,7 @@ function App() {
     setImage(e.target.files[0]);
     setResult(null);
 
-    e.target.value = ""; // FIX 1: allows re-uploading same file
+    e.target.value = "";
   };
 
   const handleAnalyze = async () => {
@@ -55,28 +55,16 @@ function App() {
     setResult(null);
 
     if (fileInputRef.current) {
-      fileInputRef.current.value = ""; // FIX 3: full reset
+      fileInputRef.current.value = "";
     }
   };
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      {/* NAVBAR */}
-      <nav className="navbar fixed top-0 left-0 w-full z-50 navlinks">
-        <div className="nav-inner max-w-7xl mx-auto">
-          <div className="flex items-center gap-2">
-            <span className="logo leading-none flex items-center">RetinAI</span>
-          </div>
-          <div className="nav-links flex overflow-x-auto whitespace-nowrap pb-1 sm:pb-0">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#">Dashboard</a>
-            <button onClick={triggerUpload} className="nav-link-button">
-              Start Scan
-            </button>
-          </div>
-        </div>
-      </nav>
+      <div className="logo-container">
+        <h1 className="logo">RetinAI</h1>
+      </div>
+
 
       {/* HERO */}
       <section className="hero">
@@ -104,7 +92,7 @@ function App() {
                   <button onClick={triggerUpload}>Upload Image</button>
                 ) : (
                   <div className="flex flex-col gap-3">
-                    <div className="bg-white px-4 py-2 rounded border border-gray-200 text-sm italic">
+                    <div className="bg-white px-4 py-2 text-sm">
                       {image.name}
                     </div>
                     <div className="flex gap-3 justify-center">
