@@ -2,6 +2,8 @@
 
 This repository contains the **frontend** for RetinAI, a web app that allows users to upload retina images and get a diabetic retinopathy stage prediction using an AI backend.
 
+![RetinAI Screenshot](./screenshot.png)
+
 ## Features
 
 - Upload a retinal image
@@ -22,7 +24,9 @@ This repository contains the **frontend** for RetinAI, a web app that allows use
    git clone https://github.com/Mahrukh-Haseeb/diabetic-retinopathy-stage-prediction-app.git
    cd diabetic-retinopathy-stage-prediction-app
 2. Install:
+   ```bash
    npm install
 
 3. Run dev server:
+   ```bash
    npm run dev
